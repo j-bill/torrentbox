@@ -3,8 +3,8 @@
 # ---------------------------------------------------------------------------------
 #	torrentbox install script final_ish
 #
-#	Copyright (c) 2019 d3str0yer
-#   github.com/d3str0yer
+#	Copyright (c) 2019 j-bill
+#   	github.com/j-bill
 #	This file is part of "torrentbox" which is released under the MIT license.
 # ---------------------------------------------------------------------------------
 
