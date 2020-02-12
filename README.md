@@ -73,8 +73,8 @@ sudo nano /etc/fstab
 ```sh
 #device        mountpoint             fstype    options  dump   fsck
 
-/dev/sda1    /mnt/downloading    ext4    defaults,nofail,uid=1001,gid=1001    0    1
-/dev/sdb1    /mnt/hdd    ext4    defaults,nofail,uid=1001,gid=1001    0    1
+/dev/sda1    /mnt/downloading    ext4    defaults,nofail    0    1
+/dev/sdb1    /mnt/hdd    ext4    defaults,nofail1    0    1
 ```
 _Press CTRL+X, Y, ENTER to save the file_
 
