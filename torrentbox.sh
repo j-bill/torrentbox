@@ -1,7 +1,7 @@
 #! /bin/bash
 #
 # ---------------------------------------------------------------------------------
-#	torrentbox install script final_ish
+#	torrentbox install script final for now
 #
 #	Copyright (c) 2020 j-bill
 #   	github.com/j-bill
