@@ -206,6 +206,7 @@ echo "Setting up MOTD..."
 echo "/opt/torrentbox/welcome.sh" >> /etc/profile
 echo "" > /etc/motd
 
+
 #changing hostname
 echo
 echo "Changing Hostname to \"torrentbox\"..."
@@ -303,6 +304,8 @@ crontab cronjob
 
 #if seedbox with vpn was selected
 if [ $mode -eq 1 ] ; then
+  #moving script that automatically restarts openvpn in case of a connection error
+  cp files/check_online.sh /opt/torrentbox
   #adding openvpn to autostart
   echo
   echo "Set OpenVPN to Autostart..."
