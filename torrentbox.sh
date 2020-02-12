@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------------
 #	torrentbox install script final_ish
 #
-#	Copyright (c) 2019 j-bill
+#	Copyright (c) 2020 j-bill
 #   	github.com/j-bill
 #	This file is part of "torrentbox" which is released under the MIT license.
 # ---------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ printf "${color_default}"
 #function to check/install and print what has installed
 license() {
 echo ""
-echo "Copyright (c) 2019 j-bill"
+echo "Copyright (c) 2020 j-bill"
 echo
 echo "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:"
 echo
@@ -290,12 +290,14 @@ echo "Setting up delay for qBittorrent..."
 sed -i "s/exit 0//" /etc/rc.local
 echo "sleep 7" >> /etc/rc.local
 echo "service qbittorrent start" >> /etc/rc.local
+echo "sleep 7" >> /etc/rc.local
+echo "chown -R /mnt" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 
 #cronjobs for restarting openvpn every 6 hours and create vnstati pictures every 5 minutes
 echo
 echo "Setting up cronjobs..."
-echo "0 */6 * * * sudo service openvpn restart > /dev/null 2>&1" >> cronjob
+echo "*/5 * * * * nice /opt/torrentbox/check_online.sh > /dev/null 2>&1#!/bin/bash" >> cronjob
 echo "*/5 * * * * nice /opt/torrentbox/vnstati.sh > /dev/null 2>&1" >> cronjob
 crontab cronjob
 
