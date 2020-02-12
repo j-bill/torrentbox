@@ -306,6 +306,7 @@ crontab cronjob
 if [ $mode -eq 1 ] ; then
   #moving script that automatically restarts openvpn in case of a connection error
   cp files/check_online.sh /opt/torrentbox
+  chmod u+x /opt/torrentbox/check_online.sh
   #adding openvpn to autostart
   echo
   echo "Set OpenVPN to Autostart..."
