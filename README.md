@@ -88,7 +88,7 @@ Connect to your Raspberry through SSH as user "pi" with the password "raspberry"
 
 ```sh
 sudo apt install git -y
-git clone https://github.com/d3str0yer/torrentbox.git -q
+git clone https://github.com/j-bill/torrentbox.git -q
 cd torrentbox
 sudo chmod u+x ./torrentbox.sh
 sudo ./torrentbox.sh
