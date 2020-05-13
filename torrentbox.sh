@@ -292,7 +292,7 @@ sed -i "s/exit 0//" /etc/rc.local
 echo "sleep 7" >> /etc/rc.local
 echo "service qbittorrent start" >> /etc/rc.local
 echo "sleep 7" >> /etc/rc.local
-echo "chown -R /mnt" >> /etc/rc.local
+echo "chown -R /mnt qbtuser:qbtuser" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 
 #cronjobs for restarting openvpn every 6 hours and create vnstati pictures every 5 minutes
