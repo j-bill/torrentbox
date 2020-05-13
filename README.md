@@ -74,13 +74,13 @@ sudo nano /etc/fstab
 #device        mountpoint             fstype    options  dump   fsck
 
 /dev/sda1    /mnt/downloading    ext4    defaults,nofail    0    1
-/dev/sdb1    /mnt/hdd    ext4    defaults,nofail1    0    1
+/dev/sdb1    /mnt/hdd    ext4    defaults,nofail    0    1
 ```
 _Press CTRL+X, Y, ENTER to save the file_
 
 (change sda1 and sdb1 depending on which is the stick and which is the hdd, find out which is which with the command lsusb)
 
-You can do this step after the installation, or during, or before
+You can do this step after the installation, or before (ONLY if harddrives are empty!)
 
 ## Start the Installation
 
