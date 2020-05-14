@@ -298,7 +298,7 @@ echo "exit 0" >> /etc/rc.local
 #cronjobs for restarting openvpn every 6 hours and create vnstati pictures every 5 minutes
 echo
 echo "Setting up cronjobs..."
-echo "*/5 * * * * nice /opt/torrentbox/check_online.sh > /dev/null 2>&1#!/bin/bash" >> cronjob
+echo "*/5 * * * * nice /opt/torrentbox/check_online.sh > /dev/null 2>&1" >> cronjob
 echo "*/5 * * * * nice /opt/torrentbox/vnstati.sh > /dev/null 2>&1" >> cronjob
 crontab cronjob
 
